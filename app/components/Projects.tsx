@@ -34,7 +34,7 @@ const PROJECTS = [
   {
     year: '2025',
     client: 'Cover Song',
-    name: 'Featured Cover',
+    name: 'Featured: New Year',
     tags: ['Instagram', 'Reel', 'Cover'],
     img: '/instagram_1.png',
     href: 'https://www.instagram.com/reel/DS9tmg_CKvi/',
@@ -42,7 +42,7 @@ const PROJECTS = [
   {
     year: '2025',
     client: 'Christmas Cover',
-    name: 'Featured Christmas',
+    name: 'Featured: Christmas',
     tags: ['Instagram', 'Reel', 'Christmas'],
     img: '/instagram_2.png',
     href: 'https://www.instagram.com/reel/DSpW-0dAasJ/',
@@ -50,7 +50,7 @@ const PROJECTS = [
   {
     year: '2025',
     client: 'Onam Cover',
-    name: 'Featured Onam',
+    name: 'Featured: Onam',
     tags: ['Instagram', 'Reel', 'Onam'],
     img: '/instagram_3.png',
     href: 'https://www.instagram.com/reel/DONQ0rmEcWy/',

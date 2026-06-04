@@ -704,6 +704,10 @@ body.no-scroll {
   object-fit: cover;
 }
 
+.ProjectRow-mobileImg {
+  display: none;
+}
+
 /* ──────────────────────────────────
    MARQUEE SECTION
    ────────────────────────────────── */
@@ -843,6 +847,10 @@ body.no-scroll {
 
   .ProjectRow-right {
     display: none;
+  }
+  
+  .ProjectRow-title {
+    font-size: clamp(24px, 5vw, 40px);
   }
 }
 

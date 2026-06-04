@@ -125,7 +125,26 @@ export default function Projects() {
         <div className="Uppercase" style={{ fontSize: '14px', color: 'var(--accent)' }}>0{PROJECTS.length} works</div>
       </div>
 
-      <div className="ProjectList">
+      <div 
+        className="ProjectList"
+        onTouchMove={(e) => {
+          const touch = e.touches[0];
+          pos.current.x = touch.clientX;
+          pos.current.y = touch.clientY;
+          const el = document.elementFromPoint(touch.clientX, touch.clientY);
+          const row = el?.closest('.ProjectRow') as HTMLAnchorElement;
+          if (row) {
+            const index = itemsRef.current.indexOf(row);
+            if (index !== -1 && PROJECTS[index]) {
+              setActiveImage(PROJECTS[index].img);
+              setIsHovering(true);
+            }
+          } else {
+            setIsHovering(false);
+          }
+        }}
+        onTouchEnd={() => setIsHovering(false)}
+      >
         {PROJECTS.map((p, i) => (
           <Link
             key={i}

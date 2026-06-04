@@ -29,7 +29,18 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer id="footer" className="Footer">
+    <footer 
+      id="footer" 
+      className="Footer"
+      onMouseEnter={() => {
+        document.querySelector('.cursor')?.classList.add('white-mode');
+        document.querySelector('.cursor-follower')?.classList.add('white-mode');
+      }}
+      onMouseLeave={() => {
+        document.querySelector('.cursor')?.classList.remove('white-mode');
+        document.querySelector('.cursor-follower')?.classList.remove('white-mode');
+      }}
+    >
       <div className="Footer-top">
         {/* Left side: CTA */}
         <div ref={ctaRef} style={{ opacity: 0 }}>
@@ -37,7 +48,12 @@ export default function Footer() {
             Let's work<br />
             <em>together.</em>
           </div>
-          <a href="mailto:anumariaaj18@gmail.com" className="Footer-email">
+          <a 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=anumariaaj18@gmail.com" 
+            target="_blank" 
+            rel="noopener" 
+            className="Footer-email"
+          >
             anumariaaj18@gmail.com
           </a>
           <div style={{ marginTop: '24px', fontSize: '12px', letterSpacing: '0.05em', color: 'rgba(255,255,255,0.7)', maxWidth: '400px', lineHeight: '1.6' }}>

@@ -122,12 +122,12 @@ body.no-scroll {
 }
 
 .cursor-follower.white-mode {
-  border-color: #fff;
-  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .cursor.white-mode {
-  background: #fff;
+  background: #fff !important;
 }
 
 /* ──────────────────────────────────

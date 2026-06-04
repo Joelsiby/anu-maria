@@ -26,21 +26,34 @@ export default function Footer() {
         },
       }
     );
+
+    // White cursor effect on hover
+    const footer = document.getElementById('footer');
+    const onEnter = () => {
+      document.querySelector('.cursor')?.classList.add('white-mode');
+      document.querySelector('.cursor-follower')?.classList.add('white-mode');
+    };
+    const onLeave = () => {
+      document.querySelector('.cursor')?.classList.remove('white-mode');
+      document.querySelector('.cursor-follower')?.classList.remove('white-mode');
+    };
+
+    if (footer) {
+      footer.addEventListener('mouseenter', onEnter);
+      footer.addEventListener('mouseleave', onLeave);
+    }
+
+    return () => {
+      if (footer) {
+        footer.removeEventListener('mouseenter', onEnter);
+        footer.removeEventListener('mouseleave', onLeave);
+      }
+      onLeave();
+    };
   }, []);
 
   return (
-    <footer 
-      id="footer" 
-      className="Footer"
-      onMouseEnter={() => {
-        document.querySelector('.cursor')?.classList.add('white-mode');
-        document.querySelector('.cursor-follower')?.classList.add('white-mode');
-      }}
-      onMouseLeave={() => {
-        document.querySelector('.cursor')?.classList.remove('white-mode');
-        document.querySelector('.cursor-follower')?.classList.remove('white-mode');
-      }}
-    >
+    <footer id="footer" className="Footer">
       <div className="Footer-top">
         {/* Left side: CTA */}
         <div ref={ctaRef} style={{ opacity: 0 }}>
